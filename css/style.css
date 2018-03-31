@@ -131,4 +131,21 @@ body {
 	margin-top: 3px;
 }
 
+.code {
+  background-color: #222829;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: "SF Mono","Fira Mono",Monaco,Menlo,Consolas,monospace;
+  font-size: 14px;
+}
+
+.code2 {
+  background-color: #222829;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: "SF Mono","Fira Mono",Monaco,Menlo,Consolas,monospace;
+  font-size: 14px;
+}
 
