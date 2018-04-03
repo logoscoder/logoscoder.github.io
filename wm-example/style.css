@@ -1,0 +1,23 @@
+
+body {
+  overflow: hidden;
+}
+
+#add-window {
+  float: right;
+  margin-top: 5px;
+  margin-right: 5px;
+  border: 0;
+  padding: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 2px 2px 2px gray;
+}
+
+#add-window:hover {
+  background-color: purple;
+  color: white;
+}
