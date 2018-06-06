@@ -1,0 +1,127 @@
+<html>
+<head>
+  <meta charset='utf-8' >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Livros</title>
+  <script src='js/jquery.min.js' ></script>
+  <style>
+    body {
+      background-color: #1d1d1e;
+      color: #00ff00;
+      text-align:center;
+    }
+    .campo {
+      background-color: gray;
+      border: 1px solid #00ff00;
+      outline: none;
+      padding-left: 3px;
+      padding-right: 3px;
+      color: white;
+      font-weight: bold;
+    }
+    .item {
+      background-color: #444547;
+      margin: 5px;
+      border-radius: 5px;
+      font-weight: bold;
+      color: white;
+    }
+    .dash {
+      color: #00ff00;
+    }
+    .dash2 {
+      color: white;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  
+  Total de páginas do livro<br>
+  <input id='total-de-paginas' value='' class='campo' type='text' />
+  <br><br>
+  
+  Minutos gasto por página<br>
+  <input id='minutos-por-pagina' class='campo' type='text' />
+  <br><br>
+  
+  <div id='resultado' >
+  
+  </div>
+  
+  <script>
+  $(document).ready(function(){
+    $('#minutos-por-pagina').on('input', function(){
+      if ($('#minutos-por-pagina').val().length > 0) {
+        var valor = $('#minutos-por-pagina').val();
+        if (valor[valor.length-1] != '.') {
+          var valid = true;
+          for (var a=0; a<valor.length; a++) {
+            if (valor[a] != 0 && valor[a] != 1 && valor[a] != 2 &&
+                valor[a] != 3 && valor[a] != 4 && valor[a] != 5 &&
+                valor[a] != 6 && valor[a] != 7 && valor[a] != 8 && 
+                valor[a] != 9 && valor[a] != '.') {
+              valid = false;
+              break;
+            }
+          }
+          if (valid == true)
+            Calcula($('#minutos-por-pagina').val());
+        }
+      }
+    });
+    $('#total-de-paginas').val('');
+    $('#minutos-por-pagina').val('');
+    $('#total-de-paginas').focus();
+  });
+  
+  function Calcula (minutos) {
+    if (!($('#total-de-paginas').val().length > 0)) {
+      alert('Digite a quantidade de páginas do livro!');
+      $('#minutos-por-pagina').val('');
+      $('#total-de-paginas').focus();
+      return false;
+    }
+    
+    var paginasPorHora = 60 / minutos;
+    paginasPorHora = paginasPorHora.toFixed(2);
+    var totalDePaginas = $('#total-de-paginas').val();
+    var diasParaTermino = 0;
+    var resultado = '';
+    var paginasPorDiaFN = '';
+    
+    resultado += '<span class="dash2" >Páginas por hora: '+ paginasPorHora +'</span><br><br>';
+    
+    for (var a=1; a<25; a++) {
+      var paginasPorDia = a * paginasPorHora;
+      
+      diasParaTermino = parseFloat(totalDePaginas / paginasPorDia);
+      diasParaTermino = diasParaTermino.toFixed(2);
+      
+      if (paginasPorDia > totalDePaginas) {
+        paginasPorDia = totalDePaginas;
+        
+        if (a == 24)
+          diasParaTermino = '1 dia';
+        else
+          diasParaTermino = 'menos de 1 dia';
+        
+        paginasPorDiaFN = parseFloat(paginasPorDia);
+        paginasPorDiaFN = paginasPorDiaFN.toFixed(2);
+        resultado += '<div class="item" >Lendo <span class="dash" >'+ a +'</span> hora(s) por dia totaliza <span class="dash" >'+ paginasPorDiaFN +'</span> página(s). E gastará <span class="dash" >'+ diasParaTermino +'</span> para leitura do livro.</div>';
+        break;
+      }
+      
+      paginasPorDiaFN = parseFloat(paginasPorDia);
+      paginasPorDiaFN = paginasPorDiaFN.toFixed(2);
+      resultado += '<div class="item" >Lendo <span class="dash" >'+ a +'</span> hora(s) por dia totaliza <span class="dash" >'+ paginasPorDiaFN +'</span> página(s). E gastará <span class="dash" >'+ diasParaTermino +'</span> dia(s) para leitura do livro.</div>';
+    }
+    
+    $('#resultado').html(resultado);
+  }
+  </script>
+  
+  <br>
+  <br>
+</body>
+</html>
