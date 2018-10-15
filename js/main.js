@@ -115,7 +115,12 @@ $(document).ready(function(){
   console.log('main loaded!');
   
   // *** Redirecionamento para página padrão.
-  if (window.location.href.toString().indexOf('index.html') != -1)
+  if (window.location.href.toString().indexOf('index.html') != -1 || 
+      window.location.href.toString() == 'https://logoscoder.github.io/' ||
+      window.location.href.toString() == 'http://logoscoder.github.io/' ||
+      window.location.href.toString() == 'https://logoscoder.github.io' ||
+      window.location.href.toString() == 'http://logoscoder.github.io'
+      )
     window.location.href = 'pagina.html?'+ prefixo1 +'textos';
   
   
