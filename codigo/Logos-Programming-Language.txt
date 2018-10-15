@@ -1,0 +1,459 @@
+<div class="blog-post">
+<h2 class="blog-post-title" >Logos Programming Language</h2>
+<p class="blog-post-meta">Jessé Silva - 13/04/2018</p>
+
+    <p style='color:red;'>
+      Este projeto foi descontinuado, talvez eu retorne a desenvolve-lo no futuro, mas não tenho nenhuma previsão.
+    </p>
+
+    <p>
+      O nome <b>Logos</b> foi escolhido para fazer referencia direta ao Verbo Divino, nosso Senhor Jesus Cristo.
+    </p>
+
+    <p>
+      A criação da linguagem surgiu de uma necessidade pessoal, apesar da linguagem C possuir uma sintaxe agradável para muitas pessoas, eu particularmente me encontrei em uma situação onde eu simplesmente não estava gostando muito de algumas características da mesma, por exemplo, na necessidade de sempre ter que declarar os tipos de dados e a própria variável. A princípio até cogitei a idéia de de fazer alguma espécie de plugin para algum IDE ou editor de código específico ou usar algumas macros para substituir algumas partes do código para desta forma eu conseguir ter uma sintaxe mais próxima do que eu gostaria, porém com o passar do tempo fui percebendo que seria mais interessante eu criar uma sintaxe que me agrade e desenvolver um código lesse a minha sintaxe e convertesse para um código em C equivalente. E assim foi nascendo a linguagem Logos. Realizei uma série de experimentos, digo, criei vários protótipos e sintaxes diferentes para ver como ficaria a linguagem, e nesse percurso acabei mudando a própria sintaxe várias vezes até chegar no que a mesma é hoje.
+    </p>
+    
+    <p>
+      Decidi que a princípio a linguagem Logos geraria código em C nativo para que eu possa continuar usufruindo do poder que a linguagem C oferece, porém, para fins de portabilidade a mesma também gerará código em PHP e Javascript. Logos pretende ser minimalista e simplificada ao máximo, contendo por exemplo, poucos comandos para controle de fluxo, atualmente conta com apenas <b>if</b>, <b>el</b> e <b>for</b>, onde por exemplo, o comando <b>for</b> pode ser utilizado de muitas maneiras distintas como para loops infinitos, iteração com arrays, dentre outras situações, evitando assim com que se tenha comandos adicionais na linguagem como <b>foreach</b>, <b>do</b> e <b>while</b>.
+    </p>
+    
+    <p>
+      Logos é fracamente tipada, suporta programação estruturada e orientação a objetos.
+    </p>
+    
+    <br>
+    <h3>Operadores Gerais</h3>
+    
+    <table>
+    <tr>
+      <td width='150'>Operador</td>
+      <td>Descrição</td>
+    </tr>
+    <tr>
+      <td>,</td>
+      <td>Separador de comandos</td>
+    </tr>
+    <tr>
+      <td>;</td>
+      <td>Separa partes do comando de repetições <b>for</b></td>
+    </tr>
+    <tr>
+      <td>//</td>
+      <td>Comentário de linha única</td>
+    </tr>
+    <tr>
+      <td>/* */</td>
+      <td>Comentário de múltiplas linhas</td>
+    </tr>
+    <tr>
+      <td>=</td>
+      <td>Atribuição</td>
+    </tr>
+    <tr>
+      <td>new</td>
+      <td>Instanciador de objetos</td>
+    </tr>
+    <tr>
+      <td>( )</td>
+      <td>Delimitador de expressões utilizado nos comandos condicionais, repetições, definição e chamada de funções/métodos e realização de operações</td>
+    </tr>
+    <tr>
+      <td>[ ]</td>
+      <td>Delimitador de expressões utilizado nas definições e acesso a arrays</td>
+    </tr>
+    <tr>
+      <td>:</td>
+      <td>Iteração de arrays</td>
+    </tr>
+    <tr>
+      <td>end</td>
+      <td>Finalização de blocos de código</td>
+    </tr>
+    <tr>
+      <td>{ }</td>
+      <td>Formatação de dados em strings</td>
+    </tr>
+    <tr>
+      <td>\</td>
+      <td>Utilizado para escapar caracteres dentro de strings</td>
+    </tr>
+    <tr>
+      <td>&lt;</td>
+      <td>Utilizado na herança de classes (também utilizado como operador relacional nos comandos de controle de fluxo)</td>
+    </tr>
+    </table>
+    
+    <br>
+    <h3>Operadores Aritméticos</h3>
+    
+    <table>
+    <tr>
+      <td width='150'>Operador</td>
+      <td>Descrição</td>
+    </tr>
+    <tr>
+      <td>+</td>
+      <td>Soma.</td>
+    </tr>
+    <tr>
+      <td>-</td>
+      <td>Subtração</td>
+    </tr>
+    <tr>
+      <td>*</td>
+      <td>Multiplicação</td>
+    </tr>
+    <tr>
+      <td>/</td>
+      <td>Divisão</td>
+    </tr>
+    <tr>
+      <td>%</td>
+      <td>Resto</td>
+    </tr>
+    <tr>
+      <td>+=, -=, *=, /=, %=</td>
+      <td>Atribuição por valor</td>
+    </tr>
+    </table>
+    
+    <br>
+    <h3>Operadores Relacionais</h3>
+    
+    <table>
+    <tr>
+      <td width='150'>Operador</td>
+      <td>Descrição</td>
+    </tr>
+    <tr>
+      <td>!</td>
+      <td>Negação</td>
+    </tr>
+    <tr>
+      <td>!=</td>
+      <td>Não igual</td>
+    </tr>
+    <tr>
+      <td>==</td>
+      <td>Igualdade</td>
+    </tr>
+    <tr>
+      <td>></td>
+      <td>Maior que</td>
+    </tr>
+    <tr>
+      <td>&lt;</td>
+      <td>Menor que</td>
+    </tr>
+    <tr>
+      <td>>=</td>
+      <td>Maior ou igual</td>
+    </tr>
+    <tr>
+      <td><=</td>
+      <td>Menor ou igual</td>
+    </tr>
+    </table>
+    
+    <br>
+    <h3>Estrutura básica</h3>
+    
+    <p>
+      Por aceitar dois paradigmas, estruturado e orientado a objetos, Logos também aceita alguns tipos básicos para se utilizar na estrutura de um programa. Um deles é o mais simples, onde o próprio arquivo é tratado como a função de inicialização da aplicação.
+    </p>
+    
+    <pre class='code' >require io
+
+io.say('Olá mundo!')</pre>
+    
+    <p>
+      O outro é utilizando da função <b>main</b> como ponto de inicialização da aplicação.
+    </p>
+    
+    <pre class='code' >require io
+    
+def main (args)
+  io.say('Olá mundo!')
+end</pre>
+
+    <p>
+      O outro é utilizando de classes. A classe mestra onde na mesma deve necessariamente contar o método <b>main</b> para ser utilizado como ponto de inicialização da aplicação é a que se segue abaixo.
+    </p>
+    
+    <pre class='code' >require io
+    
+class Logos
+  def main (args)
+    io.say('Olá mundo!')
+  end
+end</pre>
+
+    <p>
+      Note que a classe mestra deve conter o nome da própria linguagem: <b>Logos</b>.
+    </p>
+    
+    <br>
+    <h3>Arquivos de cabeçalho</h3>
+    
+    <p>
+      O comando <b>require</b> aceita apenas que o nome do arquivo de cabeçalho seja especificado na mesma linha, para múltiplos arquivos pode-se utilizar a vírgula para separar os mesmos.
+    </p>
+    
+    <pre class='code' >require io, string</pre>
+    
+    <br>
+    <h3>Variáveis</h3>
+    
+    <p>
+      Em Logos não é necessário declarar o tipo de dado da variável, isto para os casos onde é utilizado dados de tipo numérico (seja inteiros, números de ponto flutuante ou valores hexadecimais) e strings (seja um único caractere ou uma cadeia de caracteres). Nos exemplos abaixo o compilador vai identificar o tipo da variável no momento em que é especificado um valor para o mesma.
+    </p>
+    
+    <pre class='code' >
+a = 10
+b = 0x01
+c = 10.7
+d = 'a'
+e = 'string'</pre>
+    
+    <p>
+      Quando uma variável é passada como atribuição a outra variável como no exemplo abaixo, o que ocorre é que o tipo de dado anteriormente identificado na variável de atribuição é também passado para a variável a qual foi atribuída o valor.
+    </p>
+    
+    <pre class='code' >
+varA = varB</pre>
+    
+    <p>
+      Dado os exemplos acima, note que os tipos dos dados são identificados de acordo com a atribuição, logo, para números hexadecimais os mesmos devem vir com o prefixo <b>0x</b>, quando algum ponto é encontrado na atribuição o mesmo é dado como um número de ponto flutuante, quando apenas um caractere é encontrado na string o mesmo é dado como um único caractere, quando encontra-se uma cadeia de caracteres é dado como string.
+    </p>
+    
+    <p>
+      Quando as variáveis são utilizadas com operadores aritméticos as mesmas são tratadas como dados do tipo numérico. Quando são utilizadas com operadores relacionais as mesmas são analisadas de acordo com seu tipo.
+    </p>
+    
+    <p>
+      Para definição de textos pode-se ainda assim utilizar as aspas simples (ou duplas).
+    </p>
+    
+    <pre class='code' >
+string = '
+  
+  Logos é uma linguagem legal
+  criada pra ser simples e divertida xD
+
+'</pre>
+    
+    <br>
+    <h3>Arrays</h3>
+    
+    <pre class='code' >
+array = [
+  10, 20, 30, [
+    'string', 10.1, 0x01
+  ]
+]</pre>
+    
+    <br>
+    <h3>Hashs</h3>
+    
+    <p>
+      As hash funcionam como os arrays, mas no caso, além de poder acessar os mesmos através de um identificador numérico pode-se utilizar o nome atribuído, no caso do exemplo abaixo <b>keyA</b>, <b>keyB</b>, etc.. Basta especificar o nome do identificador seguido do operador de atribuição que por sua vez vem seguido do valor. No valor é aceito qualquer tipo de dado incluindo arrays.
+    </p>
+    
+    <pre class='code' >
+array = [
+  'keyA' = 'value',
+  'keyB' = 10,
+  'keyC' = 0x01,
+  'keyD' = [
+    10, 20, 30
+  ]
+]</pre>
+    
+    <br>
+    <h3>Decisões</h3>
+    
+    <p>
+      Toda vez que é utilizado o comando <b>if</b>, no seu término deve necessariamente conter o comando <b>end</b> para identificar a finalização do bloco de código.
+    </p>
+    
+    <pre class='code' >
+if (var == 10)
+  io.say('Valor igual a dez')
+end</pre>
+    
+    <p>
+      Como Logos procura ser minimalista e simplificada, os equivalentes aos comandos <b>else</b> e <b>else if</b> da linguagem C é simplesmente o <b>el</b>. Para ambos os casos usa-se o mesmo comando, porém, com especificações diferentes. Quando é encontrado parênteses após o comando <b>el</b> o mesmo é dado como equivalente ao <b>else if</b>, quando não é encontrado é dado como <b>else</b>.
+    </p>
+    
+    <pre class='code' >
+if (var == 10)
+  io.say('Valor igual a dez')
+el (var > 10)
+  io.say('Valor maior que dez')
+el
+  io.say('Valor desconhecido')
+end</pre>
+
+    <br>
+    <h3>Repetições</h3>
+    
+    <p>
+      O comando <b>for</b> busca ser o máximo flexível possível. Para tal segue os exemplos.
+    </p>
+    
+    <p>
+      Loop infinito:
+    </p>
+    
+    <pre class='code' >
+for (true)
+  io.say('Executa infinitamente')
+end</pre>
+    
+    <p>
+      Imprime valores de 0 a 9:
+    </p>
+    
+    <pre class='code' >
+for (a=0; a&lt;10; a++)
+  io.say('Valor: {a}')
+end</pre>
+    
+    <p>
+      Quando a parte de incremento não é necessária:
+    </p>
+    
+    <pre class='code' >
+for (a=0; a&lt;10)
+  io.say('Valor: {a}')
+  a++
+end</pre>
+    
+    <p>
+      Quando não é encontrada nenhuma divisão no comando (realizada com o ;), o mesmo funciona como condicional:
+    </p>
+    
+    <pre class='code' >
+a = 0
+for (a&lt;10)
+  io.say('Valor: {a}')
+  a++
+end</pre>
+    
+    <br>
+    <h3>Formatação</h3>
+    
+    <p>
+      O nome da variável é especificada entre as chaves dentro da string e independente do tipo dos dados da variável o mesmo é formatado na string final.
+    </p>
+    
+<pre class='code' >
+a = 10, b = 20
+string = 'Valor A: {a} valor B: {b}'</pre>
+    
+    <br>
+    <h3>Definição de classes, métodos e atributos</h3>
+    
+    <p>
+      Para acessar os atributos inteiros da classe, seja variáveis ou métodos, utiliza-se o comando <b>this</b> seguido de um ponto.
+    </p>
+    
+<pre class='code' >
+class exemplo
+  
+  valor = 0
+  
+  def metodoA (valor)
+    this.valor = valor
+  end
+  
+  def metodoB ()
+    io.say('Valor: {this.valor}')
+  end
+  
+end
+</pre>
+
+    <br>
+    <h3>Instanciando um objeto</h3>
+    
+<pre class='code' >
+obj = new exemplo()
+obj.metodoA(10)
+obj.metodoB()
+</pre>
+    
+    <br>
+    <h3>Inicializador da classe (constructor)</h3>
+    
+    <p>
+      Basta que seja definido um método com o mesmo nome da classe definida.
+    </p>
+    
+<pre class='code' >
+class exemplo
+
+  valor = 0
+  
+  def exemplo (valor)
+    this.valor = valor
+  end
+  
+end
+</pre>
+    
+    <br>
+    <h3>Herança</h3>
+    
+<pre class='code' >
+class veiculo
+  rodas = 0
+end
+
+class carro &lt; veiculo
+  def carro (rodas)
+    this.rodas = rodas
+  end
+end</pre>
+    
+    <br>
+    <h3>Definição de funções/métodos</h3>
+    
+    <p>
+      É possível especificar parâmetros opcionais na definição de funções/métodos bastando inicializar os mesmos na própria definição.
+    </p>
+    
+<pre class='code' >
+def function (paramA, paramB = 10, paramC)
+  ...
+end</pre>
+    
+    <br>
+    <h3>Inline</h3>
+    
+    <p>
+      Como Logos gera código para outras linguagens além de C, como PHP e Javascript, o operador <b>__inline</b> é utilizado para todos os casos. Os dados especificados dentro do comando são inseridos diretamente na mesma região do código no respectivo código de saída gerado. O mesmo tem seu término no comando <b>__end</b>.
+    </p>
+    
+    <pre class='code' >
+__inline
+  printf("Olá mundo!\n");
+__end</pre>
+    
+			
+		</div>
+    
+    <style>
+    .code {
+    background-color: #222829;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: "SF Mono","Fira Mono",Monaco,Menlo,Consolas,monospace;
+    font-size: 14px;
+}
+    </style>
+		
+    <script src='./js/sintaxe.js' ></script>
+    
