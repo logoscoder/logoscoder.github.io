@@ -90,6 +90,12 @@ var Codigos = [
     'data': '13/04/2018',
     'alink': false,
     'arquivo': 'Logos-Programming-Language'
+  },
+  {
+    'titulo': 'Dicionário Latim - Português',
+    'data': '17/10/2018',
+    'alink': false,
+    'arquivo': 'Dicionario-Latim-Portugues'
   }
 ];
 
