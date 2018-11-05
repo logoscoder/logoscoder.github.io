@@ -50,6 +50,11 @@ var Textos = [
     'titulo': 'O Homem Digno',
     'data': '04/10/2018',
     'arquivo': 'O-Homem-Digno'
+  },
+  {
+    'titulo': 'Métodos para estimulação da memória',
+    'data': '05/11/2018',
+    'arquivo': 'Metodos-Para-Estimulacao-Da-Memoria'
   }
 ];
 
