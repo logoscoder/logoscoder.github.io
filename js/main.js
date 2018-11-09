@@ -101,6 +101,12 @@ var Codigos = [
     'data': '17/10/2018',
     'alink': false,
     'arquivo': 'Dicionario-Latim-Portugues'
+  },
+  {
+    'titulo': 'Barra de mensagens',
+    'data': '09/11/2018',
+    'alink': false,
+    'arquivo': 'Barra-de-Mensagens'
   }
 ];
 
