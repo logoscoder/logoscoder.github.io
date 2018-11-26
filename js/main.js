@@ -310,7 +310,56 @@ function InserePostagem (dados) {
   $('#post-data').html(html);
 }
 
+// Efeitos.
+var sz = 150;
+var c = 1;
+var a = sz;
+var interval = null;
+var b = false;
 
+$(document).ready(()=>{
+  
+  var effectHTML = 
+    "<div id='effectz' style='position: absolute; left: 50%; top:70px;visibility:hidden;display:none;'>"+
+    "<div style='position: relative; left: -50%;'>"+
+    "<center>"+
+    "<img src='img/Jesus.png' id='rot' style='width:150px;' /><br>"+
+    "<span id='txt' style='font-weight:bold;text-shadow: 1px 1px 1px gray;font-size:40px;' >NO PRINCÍPIO ERA O VERBO!</span>"+
+    "</center>"+
+    "</div>"+
+    "</div>";
+  $('body').append(effectHTML);
+
+  $('#effectz').css('visibility', 'visible');
+  $('#effectz').css('display', 'block');
+  
+  interval = setInterval(()=>{
+      $('#rot').css('transform', 'rotate('+ c +'deg)');
+      if (c <= 180) {
+        $('#rot').css('width', a +'px');
+        a++;
+      } else {
+        $('#rot').css('width',  a +'px');
+        a--;
+      }
+      c++;
+      if (c >= 360) {
+        clearInterval(interval);
+        $('#effectz').css('visibility', 'hidden');
+        $('#effectz').css('display', 'none');
+        c = 1;
+        a = sz;
+      }
+
+      if (b == false) {
+        b = true;
+        $('#txt').css('color', '#e91e63');
+      } else {
+        b = false;
+        $('#txt').css('color', '#26c6da');
+      }
+  }, 0)
+})
 
 
 
