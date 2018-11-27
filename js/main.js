@@ -324,7 +324,7 @@ $(document).ready(()=>{
     "<div style='position: relative; left: -50%;'>"+
     "<center>"+
     "<img src='img/Jesus.png' id='rot' style='width:150px;' /><br>"+
-    "<span id='txt' style='font-weight:bold;text-shadow: 1px 1px 1px gray;font-size:40px;' >NO PRINCÍPIO ERA O VERBO!</span>"+
+    "<span id='txt' style='font-weight:bold;text-shadow: 1px 1px 1px gray;font-size:40px;' >NO PRINCÍPIO ERA O LOGOS!</span>"+
     "</center>"+
     "</div>"+
     "</div>";
