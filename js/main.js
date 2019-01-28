@@ -55,6 +55,11 @@ var Textos = [
     'titulo': 'Métodos para estimulação da memória',
     'data': '05/11/2018',
     'arquivo': 'Metodos-Para-Estimulacao-Da-Memoria'
+  },
+  {
+    'titulo': 'Impressões a respeito das artes',
+    'data': '28/01/2019',
+    'arquivo': 'Impressoes-a-respeito-das-artes'
   }
 ];
 
