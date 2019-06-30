@@ -223,4 +223,9 @@ deixando-me forte como aço.<br>
 </center>
 </p>
 
+<center>
+<img src='img/Baroque-Trinity-Hendrick-van-Balen-1620-Sint-Jacobskerk-Antwerp.jpg' style='width: auto; max-width: 100%;' /><br>
+<span style='font-size:11px;font-style:italic;'>Baroque Trinity, Hendrick van Balen, 1620, (Sint-Jacobskerk, Antwerp)</span>
+</center>
+
 </div>
