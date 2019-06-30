@@ -60,6 +60,11 @@ var Textos = [
     'titulo': 'Impressões a respeito das artes',
     'data': '28/01/2019',
     'arquivo': 'Impressoes-a-respeito-das-artes'
+  },
+  {
+    'titulo': 'Alguns versos para Deus',
+    'data': '30/06/2019',
+    'arquivo': 'Alguns-versos-para-Deus'
   }
 ];
 
