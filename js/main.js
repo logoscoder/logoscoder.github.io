@@ -215,13 +215,19 @@ $(document).ready(function(){
 
 // Processa postagens.
 function ProcessaPostagens (url) {
-  var uri = decodeURI(url);
+  var uri = decodeURIComponent(url);
+  
   var path = uri.split(prefixo1);
   path = path[1].split(prefixo2);
   path = path[0].trim();
   
   var postagemLink = uri.split(prefixo2);
   postagemLink = postagemLink[1].trim();
+  
+  if (postagemLink.indexOf('&') != -1) {
+    postagemLink = postagemLink.split('&');
+    postagemLink = postagemLink[0].toString().trim();
+  }
   
   // Carrega dos da postagem.
   $.get('./'+ path +'/'+ postagemLink +'.txt', function (dados) {
