@@ -1,46 +1,26 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Logoscoder - Blog</title>
-    <link rel="icon" type="image/png" href="img/favicon.png" />
-    
-    <!-- Styles. -->
-    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    
-    <link href="./css/style.css" rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Logoscoder</title>
   </head>
   <body>
     
-    <!-- Menu. -->
-    <div id='menu' ></div>
-    
-    <div class="container">
+    <center>
       <br>
-      <div class="row">
-        
-        <div class="col-sm-8 blog-main">
-          
-        </div>
-        
-        <!-- Sidebar. -->
-        <div id='sidebar' ></div>
-        
-      </div>
-    </div>
+      <br>
+      <a id='redirect-link' style='display:none;' href='Logos/'>Clique aqui para acessar o site!</a>
+    </center>
     
-    <!-- Scripts. -->
-    <script src="./js/jquery.min.js"></script>
-    <script src="./bootstrap/js/bootstrap.min.js"></script>
-    <script src="./js/control.js"></script>
+    <script>
+      window.location = 'Logos'
+      setTimeout(()=>{
+        document.getElementById('redirect-link').style.display = 'block'
+      }, 3000)
+    </script>
+    
   </body>
 </html>

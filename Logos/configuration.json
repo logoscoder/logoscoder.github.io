@@ -1,0 +1,81 @@
+{
+  "projects": [
+    
+  ],
+  
+  "articles": [
+    {
+      "title": "Alguns versos para Deus",
+      "date": "30/06/2019",
+      "param": "Alguns-versos-para-Deus",
+      "file": "Alguns versos para Deus.html"
+    },
+    {
+      "title": "Impressões a respeito das artes",
+      "date": "28/01/2019",
+      "param": "Impressoes-a-respeito-das-artes",
+      "file": "Impressões a respeito das artes.html"
+    },
+    {
+      "title": "O Homem Digno",
+      "date": "04/10/2018",
+      "param": "O-Homem-digno",
+      "file": "O Homem Digno.html"
+    },
+    {
+      "title": "Práticas e Métodos",
+      "date": "04/10/2018",
+      "param": "Praticas-e-Metodos",
+      "file": "Práticas e Métodos.html"
+    },
+    {
+      "title": "Pontos de conhecimento obrigatório sobre o estudo da lógica formal",
+      "date": "13/09/2018",
+      "param": "Pontos-de-conhecimento-obrigatorio-sobre-o-estudo-da-logica-formal",
+      "file": "Pontos de conhecimento obrigatório sobre o estudo da lógica formal.html"
+    },
+    {
+      "title": "Reflexão a respeito da verdade e das artes",
+      "date": "09/09/2018",
+      "param": "Reflexao-a-respeito-da-verdade-e-das-artes",
+      "file": "Reflexão a respeito da verdade e das artes.html"
+    },
+    {
+      "title": "Síntese do Conjunto de Possibilidades com o Ato Puro de Aristóteles através do conceito de Eternidade",
+      "date": "15/07/2018",
+      "param": "Sintese-do-Conjunto-de-Possibilidades-com-o-Ato-Puro-de-Aristoteles-atraves-do-conceito-de-Eternidade",
+      "file": "Síntese do Conjunto de Possibilidades com o Ato Puro de Aristóteles através do conceito de Eternidade.html"
+    },
+    {
+      "title": "Resumo dos livros 'Convite à Filosofia e à História da Filosofia' e 'Filosofia e Cosmovisão'",
+      "date": "20/05/2018",
+      "param": "Resumo-dos-livros-Convite-a-Filosofia-e-a-Historia-daFilosofia-e-Filosofia-e-Cosmovisao",
+      "file": "Resumo dos livros Convite à Filosofia e à História da Filosofia e Filosofia e Cosmovisão.html"
+    },
+    {
+      "title": "Análise a respeito da ordem cósmica",
+      "date": "28/03/2018",
+      "param": "Analise-a-respeito-da-ordem-cosmica",
+      "file": "Análise a respeito da ordem cósmica.html"
+    },
+    {
+      "title": "O Logos Divino",
+      "date": "28/02/2018",
+      "param": "O-Logos-Divino",
+      "file": "O Logos Divino.html"
+    },
+    {
+      "title": "O Ato Puro de Aristóteles",
+      "date": "28/02/2018",
+      "param": "O-Ato-Puro-de-Aristoteles",
+      "file": "O Ato Puro de Aristóteles.html"
+    }
+  ],
+  
+  "menus": [
+    {
+      "param": "Contact",
+      "file": "Contact.html"
+    }
+  ]
+}

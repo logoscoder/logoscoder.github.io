@@ -1,0 +1,306 @@
+
+/*
+** Responsável por controlar os estilos da aplicação.
+*/
+
+/* Ajustes gerais. */
+html, body {
+  font-size: 15px;
+  color: #555;
+  background-color: #f8f9fa;
+  font-family: "Open Sans", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+/* Master content. */
+.Logos-master-content {
+  width: calc(100% - 25%);
+  position: absolute;
+  left: calc(25% / 2);
+}
+
+/* Menu. */
+.Logos-menu {
+  width: 100%;
+  display: block;
+  padding-top: 3px;
+}
+
+.Logos-table-menu {
+  width: 100%;
+  border-bottom-color: #cdcdcd;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+.Logos-table-menu-item {
+  background-color: #9ccc65;
+  color: white;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: bold;
+  width: 120px;
+}
+
+.Logos-table-menu-item:hover {
+  background-color: #26c6da;
+}
+
+.Logos-table-menu-item-right-border {
+  border-right-color: #cdcdcd;
+  border-right-width: 1px;
+  border-right-style: solid;
+}
+
+.Logos-table-td-ajust-a {
+  width: 100%;
+}
+
+.mobile-line {
+  border-bottom-color: #cdcdcd;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  display: none;
+}
+
+/* nickname. */
+.Logos-float-menu-name {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 11px;
+}
+
+/* Área de conteúdo das postagens. */
+.Logos-content-area {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.Logos-content-title {
+  width: 100%;
+  display: block;
+  font-weight: bold;
+  font-size: 23px;
+  color: #4d4d4d;
+}
+
+.Logos-content-details {
+  width: 100%;
+  display: block;
+  font-weight: bold;
+  font-size: 11px;
+  color: #4d4d4d;
+  padding-bottom: 10px;
+}
+
+.lambda-title-style {
+  text-shadow: 0px 0px 3px black;
+  color: white;
+  display: inline-block;
+}
+
+.Logos-content-text {
+  text-align: justify;
+}
+
+.Logos-content-image-area {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.Logos-content-image {
+  max-width: 100%;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* Home. */
+.Logos-content-home-area {
+  display: flex;
+}
+
+.Logos-content-area-left {
+  flex: 0 0 50%;
+}
+
+.Logos-content-area-right {
+  flex: 1;
+}
+
+.Logos-home-title {
+  font-weight: bold;
+  font-size: 23px;
+  color: #4d4d4d;
+  margin-bottom: 5px;
+}
+
+.Logos-home-item {
+  padding-bottom: 10px;
+}
+
+.Logos-home-item-date {
+  display: inline-block;
+  font-size: 12px;
+}
+
+.Logos-home-item-text {
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.Logos-home-item-text:hover {
+  color: #9ccc65;
+}
+
+/* Uso geral. */
+
+.white { color: white; }
+.teal { color: #009688; }
+
+.Logos-table-reset {
+  padding: 0;
+  border-spacing: 0;
+}
+
+.no-select-text {
+  -moz-user-select: none; 
+  -webkit-user-select: none; 
+  -ms-user-select:none; 
+  user-select:none;
+  -o-user-select:none;
+}
+
+.censor-text {
+  font-style: oblique;
+  text-decoration: line-through;
+}
+
+.img-align-left-text {
+  float: left;
+  width: 200px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.invisible-line-block {
+  width: 100%;
+  display: block;
+  height: 1px;
+  clear: left;
+}
+
+.contact-bg-1 {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.img-size1 {
+  width: 500px;
+}
+
+.img-size2 {
+  width: 300px;
+}
+
+.post-text-title-1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/*
+** Responsive.
+*/
+
+@media only screen and (max-width: 700px) {
+  
+  /* Gerais. */
+  .img-align-left-text {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  /* Menu. */
+  .Logos-table-menu {
+    border-bottom-style: none;
+  }
+  .Logos-table-reset {
+    width: 100%;
+  }
+  .Logos-table-reset td {
+    width: 50%;
+    text-align: center;
+  }
+  .Logos-table-td-ajust-b {
+    display: none;
+  }
+  .mobile-line {
+    display: block;
+  }
+  
+  /* Postagens. */
+  .lambda-title-style {
+    font-size: 40px;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .Logos-content-title {
+    text-align: center;
+    padding-bottom: 15px;
+  }
+  
+  .Logos-content-details {
+    text-align: center;
+    padding-bottom: 15px;
+  }
+  
+  /* Home. */
+  .Logos-content-home-area {
+    display: block;
+  }
+  
+  .Logos-content-area-left {
+    display: block;
+    width: 100%;
+  }
+
+  .Logos-content-area-right {
+    border-top-color: #cdcdcd;
+    border-top-width: 1px;
+    border-top-style: solid;
+    margin-top: 30px;
+    padding-top: 30px;
+    display: block;
+    width: 100%;
+  }
+  
+  .Logos-home-item-date {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+  .Logos-home-item-text {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+/*
+** EOF.
+*/
