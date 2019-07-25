@@ -1,6 +1,17 @@
 {
   "projects": [
-    
+    {
+      "title": "Barra de mensagens",
+      "date": "09/11/2018",
+      "param": "Barra-de-mensagens",
+      "file": "Barra de mensagens.html"
+    },
+    {
+      "title": "Dicionário e Tradutor, Latim - Português",
+      "date": "17/10/2018",
+      "param": "Dicionario-e-Tradutor-Latim-Portugues",
+      "file": "Dicionário e Tradutor - Latim - Português.html"
+    }
   ],
   
   "articles": [
