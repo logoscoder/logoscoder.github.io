@@ -241,5 +241,53 @@ function GetRandNumberToken () {
   return Math.floor(Math.random() * (+max - +min)) + +min;
 }
 
+// Controle da exibição do e-mail.
+function enc (str) {
+  var newStr = ''
+  var key = 31337
+  var ar = []
+  
+  for (var a=0; a<str.length; a++)
+    ar.push( str[a].charCodeAt() * key )
+  
+  console.log(JSON.stringify(ar))
+  return newStr
+}
+
+function SanctuSanctuSanctu () {
+  var L0G05 = '', V3RBUM = 
+  [
+     3321722,3165037,3603755,3603755,3165037,
+     3603755,3290385,3384396,3697766,3039689,
+                    3635092,
+                    3572418,   // 
+                    3039689,   // P4t3R n0sT3r, Qu1 3s 1n c43L1s
+                    3071026,   // S4ncT1f1c3Tur n0m3N TuuM
+                    3039689,   // 4dv3N14T r3gNuM TuUm
+                    3384396,   // f14T v0Lunt4s Tu4 s1cuT 1n c43L0, 3t 1n T3rr4
+                    3259048,   // P4n3m n0sTruM c0t1d14NuM d4 n0B1s h0d13
+                    3478407,   // eT d1m1tt3 n0b1s d3b1T4 n0stR4
+                    2005568,   // s1cuT eT n0s d1mitt1muS d3b1t0riBu5 n0sTr1s
+                    3227711,   // eT n1 n0s 1nduc4s 1n T3ntat10n3M
+                    3415733,   // s3d lib3r4 n0s a m4L0
+                    3039689,   // 
+                    3290385,   // 4 M 3 M
+                    3384396,   // 
+                    1441502,   //   S 4 N C T U
+                    3102363,   //         S 4 N C T U
+                    3478407,   //               S 4 N C T U
+                    3415733
+  ]
+  
+  for (var a=0; a<V3RBUM.length; a++) 
+    L0G05 += String.fromCharCode(V3RBUM[a] / 31337)
+  
+  return L0G05
+}
+
+function ShowMail () {
+  $('.email-contact').text( SanctuSanctuSanctu() )
+}
+
 // EOF.
 // *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** 
