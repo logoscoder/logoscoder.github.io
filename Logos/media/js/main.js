@@ -12,7 +12,7 @@ var configurationHandle = null
 var configurationFlag = false
 
 function LogosStartup () {
-  $.getJSON('configuration.json?token='+ GetRandNumberToken()).done((data) => {
+  $.getJSON('./config/configuration.json?token='+ GetRandNumberToken()).done((data) => {
     var process = false
     if (data) 
     if (data.projects) 
