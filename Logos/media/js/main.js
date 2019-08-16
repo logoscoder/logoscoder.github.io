@@ -214,6 +214,13 @@ function GetURLParam () {
 // Captura parâmetro completo da URL.
 function GetURLParamFull () {
   var url = window.location.href.toString()
+  
+  if (url.indexOf('&') != -1) {
+    url = url.split('&')
+    url = url[0]
+    url = url.toString().trim()
+  }
+  
   var pos = url.indexOf('?')
   if (pos != -1) {
     var param = url.substring(pos+1, ( url.length ))
