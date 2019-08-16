@@ -216,6 +216,10 @@ function GetURLParamFull () {
   var url = window.location.href.toString()
   url = decodeURI(url)
   
+  if (url.indexOf('%3F') != -1) {
+    url = url.replace('%3F', '?')
+  }
+  
   if (url.indexOf('&') != -1) {
     url = url.split('&')
     url = url[0]
