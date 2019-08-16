@@ -214,6 +214,7 @@ function GetURLParam () {
 // Captura parâmetro completo da URL.
 function GetURLParamFull () {
   var url = window.location.href.toString()
+  url = decodeURI(url)
   
   if (url.indexOf('&') != -1) {
     url = url.split('&')
