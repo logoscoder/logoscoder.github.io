@@ -1,6 +1,13 @@
 {
   "projects": [
     {
+      "title": "Verbum PWM - Gerador de Sinais",
+      "date": "20/08/2020",
+      "param": "Verbum-PWM",
+      "file": "Verbum-PWM.html"
+    },
+  "projects": [
+    {
       "title": "Logos Latim - Dicionário e Tradutor, Latim",
       "date": "04/12/2019",
       "param": "Dicionario-e-Tradutor-Latim-Portugues",
